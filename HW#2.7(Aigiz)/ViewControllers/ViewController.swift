@@ -28,7 +28,9 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func logInPressed() {
-        guard userNameTextField.text == user, passwordTextField.text == password else {
+        guard userNameTextField.text == userInfo.name,
+              passwordTextField.text == password
+        else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
